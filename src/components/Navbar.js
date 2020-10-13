@@ -1,11 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { GoThreeBars } from "react-icons/go"
+import NavLink from "./NavLink"
+import { GatsbyContext } from "../context/context"
 
 import logo from "../images/pasko-logo-v2-2.png"
 
 const Navbar = () => {
+  const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext);
+
   return (
     <Wrapper>
       <div className="nav-center">
@@ -13,9 +17,11 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
-          <button className="toggle-btn">
-            <GoThreeBars />
-          </button>
+          {
+            !isSidebarOpen && <button className="toggle-btn" onClick={showSidebar}>
+              <GoThreeBars />
+            </button>
+          }
         </div>
         <ul className="nav-links">
           <li>

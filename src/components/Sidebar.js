@@ -4,16 +4,16 @@ import { MdClose } from "react-icons/md"
 import { GatsbyContext } from "../context/context"
 
 const Sidebar = () => {
-    const { hideSidebar } = useContext(GatsbyContext);
-    return (
-        <Wrapper>
-            <div className="container">
-                <button onClick={hideSidebar}>
-                    <MdClose className="btn" />
-                </button>
-            </div>
-        </Wrapper>
-    )
+  const { hideSidebar } = useContext(GatsbyContext);
+  return (
+    <Wrapper>
+      <div className="container">
+        <button onClick={hideSidebar}>
+          <MdClose className="btn" />
+        </button>
+      </div>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.aside`

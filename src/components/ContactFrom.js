@@ -16,7 +16,7 @@ const ContactFrom = () => {
                     </label>
                 </p>
                 <p>
-                    <label for="name">
+                    <label htmlFor="name">
                         Adres email (wymagane)
                         <br />
                         <input type="email" name="email" value-size="40" />
