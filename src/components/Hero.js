@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import Background from "./Background"
 
@@ -12,7 +12,10 @@ const Hero = ({ fluid, homepage, preserveStackingContext, heroContent }) => {
         <article>
           {title && <h1>{title}</h1>}
           {subTitle && <h3>{subTitle}</h3>}
-          {link && <Link to={`${link.url}`} className="btn">{link.text}</Link>}
+          {/*           {link && <Link to={`${link.url}`} className="btn">{link.text}</Link>} */}
+          {link && <AnchorLink to="/#nasza-oferta" title="Pasko-AutoSerwis - Nasza Oferta" className="btn">
+            Nasza Oferta
+          </AnchorLink>}
         </article>
       </Background>
     </Wrapper >

@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import Layout from "../components/layout"
 import Hero from "../components/Hero"
@@ -66,7 +66,9 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div className="section-center four">
-          <Link to="/#nasza-oferta" className="btn btn-center">Zobacz Naszą Ofertę</Link>
+          <AnchorLink to="/#nasza-oferta" title="Pasko-AutoSerwis - Zoabcz Naszą Oferte" className="btn btn-center">
+            Zobacz Naszą Ofertę
+          </AnchorLink>
         </div>
       </Content>
       <ImageSeparator />
