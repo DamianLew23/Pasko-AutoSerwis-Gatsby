@@ -1,16 +1,40 @@
 import React, { useContext } from 'react'
 import styled from "styled-components"
 import { MdClose } from "react-icons/md"
+import { Link } from "gatsby"
+
 import { GatsbyContext } from "../context/context"
 
 const Sidebar = () => {
-  const { hideSidebar } = useContext(GatsbyContext);
+  const { hideSidebar, links } = useContext(GatsbyContext);
   return (
     <Wrapper>
       <div className="container">
         <button onClick={hideSidebar}>
-          <MdClose className="btn" />
+          <MdClose className="button" />
         </button>
+        <div className="links">
+          {
+            links.map((link, index) => {
+              const { label, url, subPages } = link;
+              return (
+                <>
+                  <Link to={url} key={index} onClick={hideSidebar}>{label}</Link>
+                  {
+                    subPages.length > 0 ? <ul className="sublinks">
+                      {
+                        subPages.map((subPage, index) => {
+                          const { url, label, icon } = subPage;
+                          return <Link to={url} key={index} onClick={hideSidebar}>{icon} {label}</Link>
+                        })
+                      }
+                    </ul> : null
+                  }
+                </>
+              )
+            })
+          }
+        </div>
       </div>
     </Wrapper>
   )
@@ -35,7 +59,9 @@ position: fixed;
     width: 80vw;
     height: 80vh;
     border-radius: var(--radius);
-    position: relative;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
     padding: 4rem 2rem 2rem 2rem;
     button {
       position: absolute;
@@ -66,6 +92,33 @@ position: fixed;
         .icon {
           color: #88add2;
           font-size: 2rem;
+        }
+        &:hover {
+          color: #88add2;
+          .icon {
+            color: #0a2540;
+          }
+        }
+      }
+    }
+
+        .sublinks {
+      display: grid;
+      gap: 1rem 2rem;
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      a {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        color: #0a2540;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 0.8rem;
+        .icon {
+          color: #88add2;
+          font-size: 1rem;
         }
         &:hover {
           color: #88add2;

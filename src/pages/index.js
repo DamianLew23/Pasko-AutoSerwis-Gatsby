@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   const { about: { childImageSharp: { fluid: aboutImage } } } = data;
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Serwis Blacharsko - Lakierniczy Rzeszów" />
       <Hero fluid={headerImage} homepage preserveStackingContext heroContent={heroContent} />
       <Content>
         <BackgroundImage
@@ -79,7 +79,7 @@ const heroContent = {
   title: "SERWIS BLACHARSKO - LAKIERNICZY RZESZÓW",
   subTitle: "Wycena i Naprawy Powypadkowe",
   link: {
-    url: "#nasza-oferta",
+    url: "/#nasza-oferta",
     text: "Nasza Oferta"
   }
 }

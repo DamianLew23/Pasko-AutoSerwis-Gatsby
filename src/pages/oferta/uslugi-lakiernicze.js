@@ -12,7 +12,7 @@ const UslugiLakierniczePage = ({ data }) => {
   const { image: { childImageSharp: { fluid: aboutImage } } } = data;
   return (
     <Layout>
-      <SEO title="Usługi Lakiernicze" />
+      <SEO title="Usługi Lakiernicze Rzeszów" description="Świadczymy Kompleksowe Usługi Lakiernicze. Posiadamy Własną Mieszalnię Kolorów. Wykorzystujemy Markowe Lakiery Wodne AutoColor AQUABASE." />
       <Hero fluid={headerImage} preserveStackingContext heroContent={heroContent} />
       <Content>
         <BackgroundImage

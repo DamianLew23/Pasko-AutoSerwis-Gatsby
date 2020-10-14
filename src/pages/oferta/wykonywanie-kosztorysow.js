@@ -12,7 +12,7 @@ const WykonwywanieKosztorysow = ({ data }) => {
   const { image: { childImageSharp: { fluid: aboutImage } } } = data;
   return (
     <Layout>
-      <SEO title="Wyceny Powypadkowe" />
+      <SEO title="Wyceny Powypadkowe Rzeszów" description="Miałeś Stłuczkę Samochodową? Otrzymałeś Zaniżone Odszkodowanie? Z Nami Sprawdzisz, Ile Ci Się Należy!" />
       <Hero fluid={headerImage} preserveStackingContext heroContent={heroContent} />
       <Content>
         <div className="header one">

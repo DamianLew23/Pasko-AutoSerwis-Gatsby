@@ -1,24 +1,37 @@
 import React from "react"
-import { FaCcStripe, FaCreditCard, FaAlipay } from "react-icons/fa"
+import { FaChevronRight } from "react-icons/fa"
 
 export default [
     {
-        page: "oferta",
-        label: "Wyceny Powypadkowe",
-        url: "/oferta/wykonywanie-kosztorysow",
-        icon: <FaCreditCard className="icon" />,
+        label: "Strona Główna",
+        url: "/",
+        subPages: []
     },
     {
-        page: "oferta",
-        label: "Usługi Lakiernicze",
-        url: "/oferta/uslugi-lakiernicze",
-        icon: <FaCreditCard className="icon" />,
+        label: "Oferta",
+        url: "/#nasza-oferta",
+        subPages: [
+            {
+                label: "Wyceny Powypadkowe",
+                url: "/oferta/wykonywanie-kosztorysow",
+                icon: <FaChevronRight className="icon" />,
+            },
+            {
+                label: "Usługi Lakiernicze",
+                url: "/oferta/uslugi-lakiernicze",
+                icon: <FaChevronRight className="icon" />,
+            },
+            {
+                label: "Likwidacja Szkody z OC Sprawcy",
+                url: "/oferta/likwidacja-szkody-z-oc-sprawcy",
+                icon: <FaChevronRight className="icon" />,
+            },
+        ]
     },
     {
-        page: "oferta",
-        label: "Likwidacja Szkody z OC Sprawcy",
-        url: "/oferta/likwidacja-szkody-z-oc-sprawcy",
-        icon: <FaCreditCard className="icon" />,
+        label: "Kontakt",
+        url: "/kontakt",
+        subPages: []
     },
 
 ]

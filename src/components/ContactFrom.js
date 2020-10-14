@@ -38,7 +38,7 @@ const ContactFrom = () => {
                 </p>
 
 
-                <button type="submit" className="btn">Wyślj</button>
+                <button type="submit" className="btn">Wyślij</button>
             </form>
         </Wrapper >
     )

@@ -24,15 +24,11 @@ const Navbar = () => {
           }
         </div>
         <ul className="nav-links">
-          <li>
-            <Link to="/"><button>Strona Główna</button></Link>
-          </li>
-          <li>
-            <button>Oferta</button>
-          </li>
-          <li>
-            <Link to="/kontakt"> <button>Kontakt</button></Link>
-          </li>
+          {
+            links.map((link, index) => {
+              return <NavLink key={index} link={link}></NavLink>
+            })
+          }
         </ul>
       </div>
     </Wrapper>
@@ -115,6 +111,12 @@ const Wrapper = styled.nav`
       width: 100%;
       text-transform: capitalize;
       position: relative;
+      cursor: pointer;
+    }
+
+    button:hover {
+      color: var(--clr-white);
+
     }
   }
 `

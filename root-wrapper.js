@@ -93,6 +93,7 @@ ul {
 }
 a {
   text-decoration: none;
+  cursor: auto;
 }
 img {
   width: 100%;
@@ -180,6 +181,7 @@ p {
   outline: 0;
   padding: 17px 40px;
   line-height: 21px;
+  cursor: pointer;
 }
 .btn:hover {
   background: var(--clr-primary-5);

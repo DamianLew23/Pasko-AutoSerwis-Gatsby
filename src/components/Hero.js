@@ -12,7 +12,7 @@ const Hero = ({ fluid, homepage, preserveStackingContext, heroContent }) => {
         <article>
           {title && <h1>{title}</h1>}
           {subTitle && <h3>{subTitle}</h3>}
-          {link && <Link to={`/${link.url}`} className="btn">{link.text}</Link>}
+          {link && <Link to={`${link.url}`} className="btn">{link.text}</Link>}
         </article>
       </Background>
     </Wrapper >

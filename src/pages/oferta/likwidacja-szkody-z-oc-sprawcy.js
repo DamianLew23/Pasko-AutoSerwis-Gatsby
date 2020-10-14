@@ -12,7 +12,7 @@ const LikwidacjaSzkodyOc = ({ data }) => {
   const { image: { childImageSharp: { fluid: aboutImage } } } = data;
   return (
     <Layout>
-      <SEO title="Likwidacja Szkody z OC Sprawcy" />
+      <SEO title="Likwidacja Szkody z OC Sprawcy" description="Bezgotówkowe Rozliczenie Szkody To Najszybszy Sposób Na Przywrócenie Samochodu Do Stanu Sprzed Kolizji." />
       <Hero fluid={headerImage} preserveStackingContext heroContent={heroContent} />
       <Content>
         <div className="header one">
