@@ -7,30 +7,31 @@ const ContactFrom = () => {
             <h3>Napisz Do Nas</h3>
             <p>Masz pytania odnośnie naszej oferty? Napisz do nas wiadomość za pomocą formularza kontaktowego. Odpowiemy tak szybko jak tylko możliwe.</p>
 
-            <form>
+            <form action="https://formspree.io/f/xqkgplzz"
+                method="POST">
                 <p>
-                    <label>
+                    <label htmlFor="name">
                         Imię i nazwisko (wymagane)
                         <br />
                         <input type="text" name="name" value-size="40" />
                     </label>
                 </p>
                 <p>
-                    <label htmlFor="name">
+                    <label htmlFor="email">
                         Adres email (wymagane)
                         <br />
                         <input type="email" name="email" value-size="40" />
                     </label>
                 </p>
                 <p>
-                    <label>
+                    <label htmlFor="topic">
                         Temat
                         <br />
                         <input type="text" name="topic" value-size="40" />
                     </label>
                 </p>
                 <p>
-                    <label>
+                    <label htmlFor="message">
                         Wiadomość
                         <br />
                         <textarea name="message" cols="40" rows="10"></textarea>
