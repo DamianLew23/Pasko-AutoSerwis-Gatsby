@@ -1,8 +1,10 @@
 import React, { useContext } from "react"
 
+
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import Sidebar from "./Sidebar"
+import ToTop from "./ToTop"
 import { GatsbyContext } from "../context/context"
 
 const Layout = ({ children }) => {
@@ -12,6 +14,7 @@ const Layout = ({ children }) => {
       <Navbar />
       {isSidebarOpen && <Sidebar />}
       {children}
+      <ToTop />
       <Footer />
     </>
   )
